@@ -12,11 +12,18 @@
   color: #fff; padding: 40px 0; text-align: center; 
   position: relative; overflow: hidden;
 }
-header::before {
-  content: '⚡';
-  position: absolute; font-size: 180px; opacity: 0.06;
-  top: 50%; left: 50%; transform: translate(-50%, -50%);
+header h1 {
+  position: relative; z-index: 2;
+  display: inline-block;
+}
+header h1 .thor-face {
+  position: absolute;
+  font-size: 90px; opacity: 0.12;
+  top: -10px; left: 50%;
+  transform: translateX(-45%);
   pointer-events: none;
+  z-index: -1;
+  line-height: 1;
 }
     header h1 { font-size: 36px; font-weight: 800; letter-spacing: -0.5px; }
     header h1 span { color: #ff4444; }
@@ -53,7 +60,7 @@ header::before {
 </head>
 <body>
   <header>
-    <h1><span>thor</span>12news</h1>
+    <h1><span>thor</span>12news<span class="thor-face">⚔️</span></h1>
     <p>12 viktiga nyheter varje dag ⚡ opartiskt sammanställt</p>
   </header>
   <div class="container">
