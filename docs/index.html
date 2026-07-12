@@ -14,69 +14,25 @@
     .container { max-width: 720px; margin: 0 auto; padding: 20px 16px; }
     .date-badge { text-align: center; margin-bottom: 24px; }
     .date-badge span { background: #eee; padding: 6px 16px; border-radius: 20px; font-size: 14px; color: #666; }
-
-    /* Article card (collapsed) */
     .article-card {
-      background: #fff;
-      border-radius: 12px;
-      margin-bottom: 16px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-      cursor: pointer;
-      overflow: hidden;
+      background: #fff; border-radius: 12px; margin-bottom: 16px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08); cursor: pointer; overflow: hidden;
       transition: box-shadow 0.2s;
     }
     .article-card:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.12); }
-    .article-card img.thumb {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      display: block;
-      background: #e0e0e0;
-    }
-    .article-card .preview {
-      padding: 16px 20px;
-    }
-    .article-card .preview h2 {
-      font-size: 20px;
-      font-weight: 700;
-      margin-bottom: 8px;
-      line-height: 1.3;
-    }
-    .meta { font-size: 13px; color: #888; margin-bottom: 8px; display: flex; gap: 6px; flex-wrap: wrap; }
-    .tag {
-      background: #e8f0fe; color: #1967d2; padding: 2px 10px; border-radius: 12px;
-      font-size: 11px; font-weight: 600; display: inline-block;
-    }
+    .article-card img.thumb { width: 100%; height: 200px; object-fit: cover; display: block; background: #e0e0e0; }
+    .article-card .preview { padding: 16px 20px; }
+    .article-card .preview h2 { font-size: 20px; font-weight: 700; margin-bottom: 4px; line-height: 1.3; }
+    .article-card .preview p.ingress { color: #666; font-size: 14px; line-height: 1.5; margin-top: 8px; }
+    .meta { font-size: 13px; color: #888; display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 6px; }
+    .tag { background: #e8f0fe; color: #1967d2; padding: 2px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; display: inline-block; }
     .tag.sverige { background: #fff3e0; color: #e65100; }
     .tag.varlden { background: #e8f5e9; color: #2e7d32; }
     .tag.ekonomi { background: #fce4ec; color: #c62828; }
-    .tag.sport { background: #f3e5f5; color: #6a1b9a; }
-    .tag.tech { background: #e0f2f1; color: #00695c; }
-    .tag.inrikes { background: #fff8e1; color: #f57f17; }
-
-    /* Expanded article content */
-    .article-card .content {
-      display: none;
-      padding: 0 20px 20px;
-      border-top: 1px solid #eee;
-    }
+    .article-card .content { display: none; padding: 0 20px 20px; border-top: 1px solid #eee; }
     .article-card.expanded .content { display: block; }
-    .article-card .content p {
-      font-size: 16px; line-height: 1.8; color: #444; margin-bottom: 14px;
-    }
-    .article-card .content p:last-child { margin-bottom: 0; }
-    .article-card .content img.inline-img {
-      width: 100%;
-      border-radius: 8px;
-      margin: 12px 0;
-      background: #f0f0f0;
-      min-height: 100px;
-    }
-    .glossary { color: #666; font-size: 14px; font-style: italic; }
-    .glossary strong { color: #333; }
-
+    .article-card .content p { font-size: 16px; line-height: 1.8; color: #444; margin-bottom: 14px; }
     footer { text-align: center; padding: 32px; color: #999; font-size: 13px; }
-
     @media (max-width: 600px) {
       header h1 { font-size: 28px; }
       .article-card .preview h2 { font-size: 17px; }
@@ -89,30 +45,86 @@
     <h1><span>Any</span>heter</h1>
     <p>Dagens viktigaste nyheter — opartiskt sammanställt</p>
   </header>
-
   <div class="container">
-    <div class="date-badge">
-      <span>📅 DAGENS_DATUM</span>
+    <div class="date-badge"><span>📅 2026-07-12</span></div>
+
+    <!-- Artikel 1 -->
+    <div class="article-card" onclick="this.classList.toggle('expanded')">
+      <img class="thumb" src="https://placehold.co/800x400/1a1a2e/e0e0e0?text=USA+Iran+Hormuz" alt="" loading="lazy">
+      <div class="preview">
+        <div class="meta"><span class="tag varlden">Världen</span><span class="tag ekonomi">Ekonomi</span></div>
+        <h2>USA attackerar Iran efter stängning av Hormuzsundet</h2>
+        <p class="ingress">USA attackerade hundratals militära mål i Iran efter att Iran stängt Hormuzsundet — en av världens viktigaste oljeleder. Experter varnar för globala ekonomiska konsekvenser.</p>
+      </div>
+      <div class="content">
+        <p>Under natten till söndagen attackerade USA hundratals militära mål i Iran efter att Iran angripit fraktfartyg och tillfälligt stängt Hormuzsundet. Experter varnar för att konflikten kan få allvarliga globala ekonomiska konsekvenser.</p>
+        <p>Hormuzsundet, ett smalt sund mellan Persiska viken och Omanbukten, är en av världens viktigaste sjöfartsleder för oljetransporter. Ungefär 20 procent av all olja som transporteras till havs passerar här. När Iran meddelade att man stängt sundet steg oljepriset kraftigt på världsmarknaderna.</p>
+        <p>Enligt Mellanösternexperten Alexander Atarodi på SVT har Iran genom kriget upptäckt en strategisk fördel i att kunna kontrollera sundet — något man tidigare avstått från på grund av internationella regler om fri passage (rätten för fartyg att passera utan hinder).</p>
+        <p>Samtidigt pågår en intern maktkamp i Iran efter att den förre ledaren ayatolla Khamenei dödats. Det iranska revolutionsgardet (en paramilitär styrka med stort politiskt inflytande) har fått ökade befogenheter. Trump-administrationen använder ett hårdare språk mot Iran, vilket gör att avståndet mellan länderna växer.</p>
+      </div>
     </div>
 
-    ARTIKLAR_HAR
+    <!-- Artikel 2 -->
+    <div class="article-card" onclick="this.classList.toggle('expanded')">
+      <img class="thumb" src="https://placehold.co/800x400/2e1a1a/e0e0e0?text=Bangkok+pub+brand" alt="" loading="lazy">
+      <div class="preview">
+        <div class="meta"><span class="tag varlden">Världen</span></div>
+        <h2>Minst 27 döda efter pubbrand i Bangkok</h2>
+        <p class="ingress">En kraftig brand på en pub i Bangkok har krävt minst 27 liv. Över 60 skadades. Den tjocka röken gjorde det svårt för gästerna att ta sig ut.</p>
+      </div>
+      <div class="content">
+        <p>Minst 27 personer har omkommit och över 60 skadats i en kraftig brand som bröt ut på en pub i Bangkok sent på söndagskvällen, lokal tid. Den tjocka svarta röken och de snabba lågorna gjorde det svårt för gästerna att ta sig ut.</p>
+        <p>Branden startade vid midnatt i Chatuchak-distriktet i norra Bangkok, ett område som inte är ett typiskt turistområde. Enligt thailändska myndigheter var branden redan mycket kraftig när räddningstjänsten anlände. Bilder från puben visar en helt utbränd lokal med krossade fönster och förkolnade inventarier.</p>
+        <p>Thailands premiärminister Anutin Charnvirakul bekräftade dödssiffran. Enligt nyhetsbyrån Reuters uppgår antalet skadade till minst 63 personer. Brandorsaken är ännu oklar.</p>
+        <p>Det svenska Utrikesdepartementet (UD) uppger att man inte känner till att några svenskar finns bland de skadade eller omkomna.</p>
+      </div>
+    </div>
 
+    <!-- Artikel 3 -->
+    <div class="article-card" onclick="this.classList.toggle('expanded')">
+      <img class="thumb" src="https://placehold.co/800x400/1a2e1a/e0e0e0?text=Osynliga+bomben" alt="" loading="lazy">
+      <div class="preview">
+        <div class="meta"><span class="tag sverige">Sverige</span></div>
+        <h2>"Osynliga bomben" som kan slå ut Sveriges samhälle</h2>
+        <p class="ingress">En EMP-bomb (elektromagnetisk puls) skulle kunna slå ut el, elektronik och transporter över Sverige — utan att döda någon. FOI märker en tydligt ökad oro.</p>
+      </div>
+      <div class="content">
+        <p>En så kallad EMP-bomb (elektromagnetisk puls) skulle kunna slå ut stora delar av Sveriges elförsörjning, elektronik, transporter och kommunikation — utan att döda en enda människa. Forskare på FOI (Försvarets forskningsinstitut) märker en tydligt ökad oro sedan Ukrainakriget bröt ut.</p>
+        <p>En EMP-bomb är ett kärnvapen som detoneras (sprängs) ovanför atmosfären. Den skapar en kraftfull elektromagnetisk puls som kan förstöra all oskärmad elektronik över ett stort område. Inte ens varningssystemet "Hesa Fredrik" (det svenska utomhusvarningssystemet) skulle klara sig.</p>
+        <p>Enligt myndigheten skulle en EMP-attack leda till omfattande samhällsstörningar. Bara äldre bilar utan avancerad elektronik skulle fungera. MSB (Myndigheten för samhällsskydd och beredskap) uppmanar alla hushåll att ha hemberedskap (förråd av mat, vatten och medicin för minst en vecka).</p>
+      </div>
+    </div>
+
+    <!-- Artikel 4 -->
+    <div class="article-card" onclick="this.classList.toggle('expanded')">
+      <img class="thumb" src="https://placehold.co/800x400/1a1a2e/e0e0e0?text=Bangladesh+skyfall" alt="" loading="lazy">
+      <div class="preview">
+        <div class="meta"><span class="tag varlden">Världen</span></div>
+        <h2>Kraftiga skyfall i Bangladesh — minst 50 döda</h2>
+        <p class="ingress">Minst 50 personer har omkommit och 35 000 är hemlösa efter skyfall och jordskred i Bangladesh. Mat- och vattenbrist i de drabbade områdena.</p>
+      </div>
+      <div class="content">
+        <p>Minst 50 personer har omkommit och 35 000 är hemlösa efter kraftiga monsunregn (årstidsbundna skyfall) och jordskred i Bangladesh. Röda Halvmånen varnar för akut mat- och vattenbrist i flera drabbade områden.</p>
+        <p>Bangladesh är ett av de länder i världen som är mest utsatta för extremväder. Landets låga höjd över havet och täta befolkning gör att monsunregn ofta får katastrofala följder. Forskare kopplar de allt kraftigare skyfallen till klimatförändringarna (den globala uppvärmningens effekt på vädret).</p>
+      </div>
+    </div>
+
+    <!-- Artikel 5 -->
+    <div class="article-card" onclick="this.classList.toggle('expanded')">
+      <img class="thumb" src="https://placehold.co/800x400/2e1a2e/e0e0e0?text=Wimbledon+Sinner" alt="" loading="lazy">
+      <div class="preview">
+        <div class="meta"><span class="tag varlden">Världen</span></div>
+        <h2>Jannik Sinner försvarar Wimbledontiteln</h2>
+        <p class="ingress">Italienske Jannik Sinner besegrade Alexander Zverev med 3–1 i finalen och tog sin femte Grand Slam-titel. 46 miljoner kronor i prispengar.</p>
+      </div>
+      <div class="content">
+        <p>Jannik Sinner, Italien, försvarade framgångsrikt sin Wimbledontitel efter en 3–1-seger (6–4, 3–6, 7–6, 6–3) mot Alexander Zverev i finalen. Segern innebär Sinners femte Grand Slam-titel (de fyra största tennisturneringarna i världen).</p>
+        <p>Prispengarna för vinnaren i Wimbledon uppgår till motsvarande cirka 46 miljoner svenska kronor, vilket gör turneringen till en av de mest lukrativa (mest inkomstbringande) inom sporten.</p>
+      </div>
+    </div>
   </div>
-
   <footer>
     <p>Anyheter — Genereras dagligen av AI. Självständig och opartisk nyhetsbevakning.</p>
   </footer>
-
-  <script>
-    document.querySelectorAll('.article-card').forEach(card => {
-      card.addEventListener('click', () => {
-        card.classList.toggle('expanded');
-        // Scroll to content if expanding
-        if (card.classList.contains('expanded')) {
-          setTimeout(() => card.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 100);
-        }
-      });
-    });
-  </script>
 </body>
 </html>
