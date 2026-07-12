@@ -2,7 +2,7 @@
 <html lang="sv">
 <head>
   <meta charset="UTF-8">
-  <link rel="icon" type="image/png" href="images/thor-icon.png">
+  <link rel="icon" type="image/png" href="/images/thor-icon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>thor12news — 12 nyheter varje dag</title>
   <style>
@@ -60,7 +60,7 @@ header {
 </head>
 <body>
   <header>
-    <img src="images/thor-icon.png" alt="" class="thor-bg"><h1><span>thor</span>12news</h1>
+    <img src="/images/thor-icon.png" alt="" class="thor-bg"><h1><span>thor</span>12news</h1>
     <p>12 viktiga nyheter ⚡ opartiskt sammanställt</p>
   </header>
   <div class="container">
@@ -68,7 +68,7 @@ header {
 
     <!-- Artikel 1 -->
     <div class="article-card" onclick="this.classList.toggle('expanded')">
-      <img class="thumb" src="images/bangkok-brand.jpg" alt="Brandplats Bangkok" loading="lazy">
+      <img class="thumb" src="/images/bangkok-brand.jpg" alt="Brandplats Bangkok" loading="lazy">
       <div class="preview">
         <div class="meta"><span class="tag varlden">Världen</span></div>
         <h2>Minst 27 döda efter pubbrand i Bangkok – över 60 skadade</h2>
@@ -83,7 +83,7 @@ header {
 
     <!-- Artikel 2 -->
     <div class="article-card" onclick="this.classList.toggle('expanded')">
-      <img class="thumb" src="images/emp-bomb.jpg" alt="Illustration EMP" loading="lazy">
+      <img class="thumb" src="/images/emp-bomb.jpg" alt="Illustration EMP" loading="lazy">
       <div class="preview">
         <div class="meta"><span class="tag sverige">Sverige</span></div>
         <h2>"Osynliga bomben" kan lamslå Sverige – så förbereder sig militären</h2>
@@ -98,7 +98,7 @@ header {
 
     <!-- Artikel 3 -->
     <div class="article-card" onclick="this.classList.toggle('expanded')">
-      <img class="thumb" src="images/frankrike-brand.jpg" alt="Storbrand i Frankrike" loading="lazy">
+      <img class="thumb" src="/images/frankrike-brand.jpg" alt="Storbrand i Frankrike" loading="lazy">
       <div class="preview">
         <div class="meta"><span class="tag varlden">Världen</span></div>
         <h2>Efter storbranden i södra Frankrike – invånarna får återvända hem</h2>
@@ -112,7 +112,7 @@ header {
 
     <!-- Artikel 4 -->
     <div class="article-card" onclick="this.classList.toggle('expanded')">
-      <img class="thumb" src="images/sinner-wimbledon.jpg" alt="Jannik Sinner" loading="lazy">
+      <img class="thumb" src="/images/sinner-wimbledon.jpg" alt="Jannik Sinner" loading="lazy">
       <div class="preview">
         <div class="meta"><span class="tag varlden">Världen</span></div>
         <h2>Jannik Sinner försvarar Wimbledontiteln – femte Grand Slam-titeln</h2>
@@ -144,15 +144,6 @@ header {
     <p>thor12news — Genereras dagligen av AI. Självständig och opartisk nyhetsbevakning.</p>
     <p style="margin-top:8px;font-size:11px;color:#bbb">Källor: SVT, DN • Bilder från SVT och DN</p>
   </footer>
-  <script>
-    // Close expanded cards when clicking outside
-    document.addEventListener('click', function(e) {
-      if (!e.target.closest('.article-card')) {
-        document.querySelectorAll('.article-card.expanded').forEach(c => c.classList.remove('expanded'));
-      }
-    });
-  </script>
-
   <script>
     // Ge varje artikel ett slug baserat på titeln
     const articles = document.querySelectorAll('.article-card');
@@ -192,7 +183,7 @@ header {
         const header = document.querySelector('header');
         header.innerHTML = '<div style="max-width:720px;margin:0 auto;padding:0 16px;display:flex;align-items:center;gap:12px">' +
           '<a href="/" style="color:#fff;text-decoration:none;font-size:24px;display:flex;align-items:center">←</a>' +
-          '<img src="images/thor-icon.png" alt="" style="height:32px;opacity:0.5">' +
+          '<img src="/images/thor-icon.png" alt="" style="height:32px;opacity:0.5">' +
           '<span style="font-size:18px;font-weight:600">thor12news</span>' +
           '</div>';
       }
