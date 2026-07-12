@@ -2,6 +2,7 @@
 <html lang="sv">
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="images/thor-icon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>thor12news — 12 nyheter varje dag</title>
   <style>
@@ -16,15 +17,7 @@ header h1 {
   position: relative; z-index: 2;
   display: inline-block;
 }
-header h1 .thor-face {
-  position: absolute;
-  font-size: 70px; opacity: 0.15;
-  top: -10px; left: 50%;
-  transform: translateX(-40%);
-  pointer-events: none;
-  z-index: -1;
-  line-height: 1;
-}
+
     header h1 { font-size: 36px; font-weight: 800; letter-spacing: -0.5px; }
     header h1 span { color: #ff4444; }
     header p { color: #999; font-size: 14px; margin-top: 4px; }
@@ -60,28 +53,8 @@ header h1 .thor-face {
 </head>
 <body>
   <header>
-    <h1><span>thor</span>12news<span class="thor-face">
-  <svg width="80" height="80" viewBox="0 0 100 100" style="display:block;">
-    <!-- Hjälm/bakgrund -->
-    <ellipse cx="50" cy="50" rx="35" ry="40" fill="#ffebd6" opacity="0.2"/>
-    <!-- Ögonbryn (arga) -->
-    <line x1="30" y1="40" x2="42" y2="44" stroke="#cc6600" stroke-width="2" opacity="0.4"/>
-    <line x1="70" y1="40" x2="58" y2="44" stroke="#cc6600" stroke-width="2" opacity="0.4"/>
-    <!-- Ögon -->
-    <circle cx="40" cy="50" r="3" fill="#333" opacity="0.3"/>
-    <circle cx="60" cy="50" r="3" fill="#333" opacity="0.3"/>
-    <!-- Näsa -->
-    <line x1="50" y1="50" x2="50" y2="62" stroke="#cc6600" stroke-width="2" opacity="0.3"/>
-    <!-- Mun -->
-    <line x1="38" y1="68" x2="62" y2="68" stroke="#cc6600" stroke-width="2" opacity="0.3"/>
-    <!-- Skägg -->
-    <path d="M30 68 Q35 90 50 95 Q65 90 70 68" stroke="#cc6600" stroke-width="2" fill="none" opacity="0.3"/>
-    <!-- Vingar på hjälmen -->
-    <path d="M18 30 Q10 20 15 15 Q20 10 28 25" stroke="#ffcc00" stroke-width="2" fill="none" opacity="0.3"/>
-    <path d="M82 30 Q90 20 85 15 Q80 10 72 25" stroke="#ffcc00" stroke-width="2" fill="none" opacity="0.3"/>
-  </svg>
-</span></h1>
-    <p>12 viktiga nyheter varje dag ⚡ opartiskt sammanställt</p>
+    <h1><img src="images/thor-icon.png" alt="" style="height:40px;vertical-align:middle;margin-right:8px;border-radius:50%;"><span>thor</span>12news</h1>
+    <p>12 viktiga nyheter ⚡ opartiskt sammanställt</p>
   </header>
   <div class="container">
     <div class="date-badge"><span>📅 2026-07-12</span></div>
