@@ -152,5 +152,52 @@ header {
       }
     });
   </script>
+
+  <script>
+    // Ge varje artikel ett slug baserat på titeln
+    const articles = document.querySelectorAll('.article-card');
+    articles.forEach((card, i) => {
+      const title = card.querySelector('h2').textContent;
+      const slug = title.toLowerCase()
+        .replace(/[åä]/g, 'a').replace(/[ö]/g, 'o')
+        .replace(/[^a-z0-9\s-]/g, '')
+        .trim().replace(/\s+/g, '-').substring(0, 50);
+      card.dataset.slug = slug;
+      
+      // Klick → navigera till artikel-sidan
+      card.addEventListener('click', (e) => {
+        e.stopPropagation();
+        window.location.href = '/artikel/' + slug;
+      });
+    });
+
+    // Kolla om vi är på en artikel-sida
+    const match = window.location.pathname.match(/^\/artikel\/(.+)/);
+    if (match) {
+      const slug = match[1];
+      const card = document.querySelector(`[data-slug="${slug}"]`);
+      if (card) {
+        // Dölj alla andra artiklar
+        document.querySelectorAll('.article-card').forEach(c => {
+          if (c !== card) c.style.display = 'none';
+        });
+        // Expandera artikeln
+        card.classList.add('expanded');
+        // Ändra titeln
+        const title = card.querySelector('h2').textContent;
+        document.title = title + ' — thor12news';
+        // Ta bort date-badge
+        document.querySelector('.date-badge').style.display = 'none';
+        // Skapa header med tillbaka-knapp
+        const header = document.querySelector('header');
+        header.innerHTML = '<div style="max-width:720px;margin:0 auto;padding:0 16px;display:flex;align-items:center;gap:12px">' +
+          '<a href="/" style="color:#fff;text-decoration:none;font-size:24px;display:flex;align-items:center">←</a>' +
+          '<img src="images/thor-icon.png" alt="" style="height:32px;opacity:0.5">' +
+          '<span style="font-size:18px;font-weight:600">thor12news</span>' +
+          '</div>';
+      }
+    }
+  </script>
+
 </body>
 </html>
