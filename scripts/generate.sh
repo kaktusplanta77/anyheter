@@ -5,7 +5,7 @@
 set -e
 cd "$(dirname "$0")/.."
 DATE=$(date +%Y-%m-%d)
-FILE="public/index.html"
+FILE="docs/index.html"
 
 # The cron agent will:
 # 1. Search for news (web_search)
@@ -21,6 +21,6 @@ echo ""
 echo "Usage from cron:"
 echo "1. web_search for top news"
 echo "2. Generate HTML articles"
-echo "3. sed -i 's/DAGENS_DATUM/$DATE/' public/index.html"
-echo "4. sed -i 's|ARTIKLAR_HAR|<article>...</article>|' public/index.html"
+echo "3. sed -i 's/DAGENS_DATUM/$DATE/' docs/index.html"
+echo "4. sed -i 's|ARTIKLAR_HAR|<article>...</article>|' docs/index.html"
 echo "5. git add -A && git commit -m 'Anyheter $DATE' && git push"
