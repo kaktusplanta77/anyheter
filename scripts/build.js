@@ -323,11 +323,39 @@ ${cards}
   <p>thor12news — 12 nyheter varje dag · 13 juli 2026</p>
   <div id="download-buttons" style="margin-top:14px;display:flex;justify-content:center;gap:10px;flex-wrap:wrap;">
     <a href="/thor12news/thor12news.apk" style="display:inline-block;background:#1a6bff;color:#fff;padding:8px 18px;border-radius:10px;text-decoration:none;font-size:13px;font-weight:600;">📱 Ladda ner för Android</a>
-    <a href="#" onclick="alert('Öppna thor12news i Safari, tryck på Dela-knappen (📤) och välj \'Lägg till på hemskärmen\' — då funkar det som en app!')" style="display:inline-block;background:#333;color:#fff;padding:8px 18px;border-radius:10px;text-decoration:none;font-size:13px;font-weight:600;">🍏 Ladda ner för iOS</a>
+    <a href="#" onclick="alert('\u00d6ppna thor12news i Safari, tryck p\u00e5 Dela-knappen (\ud83d\udce4) och v\u00e4lj \'L\u00e4gg till p\u00e5 hemsk\u00e4rmen\' \u2014 d\u00e5 funkar det som en app!')" style="display:inline-block;background:#333;color:#fff;padding:8px 18px;border-radius:10px;text-decoration:none;font-size:13px;font-weight:600;">\ud83c\udf4f Ladda ner f\u00f6r iOS</a>
   </div>
   <p style="margin-top:10px;font-size:11px;">Sammanställd av abot 🤖</p>
 </footer>
+
+<!-- Disclaimer overlay -->
+<div id="disclaimer-overlay" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);z-index:99999;overflow:auto;">
+  <div style="max-width:520px;margin:10% auto;background:#fff;border-radius:16px;padding:32px 28px;text-align:center;box-shadow:0 8px 40px rgba(0,0,0,0.3);">
+    <h2 style="font-size:22px;margin-bottom:6px;">\ud83e\udd16 thor12news</h2>
+    <p style="color:#888;font-size:13px;margin-bottom:16px;">AI-genererade nyheter \u2014 l\u00e4s med omd\u00f6me</p>
+    <div style="text-align:left;font-size:14px;line-height:1.6;color:#444;margin-bottom:20px;">
+      <p><strong>Viktigt att veta:</strong></p>
+      <ul style="padding-left:18px;margin-top:6px;">
+        <li>Allt inneh\u00e5ll \u00e4r skapat av en AI (artificiell intelligens).</li>
+        <li>Artiklarna baseras p\u00e5 riktiga nyhetsh\u00e4ndelser men \u00e4r helt AI-genererade.</li>
+        <li>Felaktigheter kan f\u00f6rekomma \u2014 kontrollera alltid med andra k\u00e4llor.</li>
+        <li>Detta \u00e4r inte professionell journalistik.</li>
+        <li>Sidan har ingen ansvarig utgivare.</li>
+      </ul>
+    </div>
+    <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
+      <button onclick="localStorage.setItem('thor12news-ok','1');document.getElementById('disclaimer-overlay').style.display='none';document.body.style.overflow='';" style="background:#1a6bff;color:#fff;border:none;padding:12px 24px;border-radius:10px;font-size:15px;font-weight:600;cursor:pointer;">Jag har f\u00f6rst\u00e5tt</button>
+      <button onclick="window.location.href='about:blank'" style="background:#eee;color:#666;border:none;padding:12px 24px;border-radius:10px;font-size:15px;cursor:pointer;">L\u00e4mna sidan</button>
+    </div>
+  </div>
+</div>
+
 <script>
+  // Disclaimer \u2014 visa om inte redan godk\u00e4nd
+  if (!localStorage.getItem('thor12news-ok')) {
+    document.getElementById('disclaimer-overlay').style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  }
   // Hide download buttons in-app or on desktop
   var db = document.getElementById('download-buttons');
   if (db) {

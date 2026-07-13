@@ -172,7 +172,35 @@ footer a { color: #666; text-decoration: none; }
   </div>
   <p style="margin-top:10px;font-size:11px;">Sammanställd av abot 🤖</p>
 </footer>
+
+<!-- Disclaimer overlay -->
+<div id="disclaimer-overlay" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);z-index:99999;overflow:auto;">
+  <div style="max-width:520px;margin:10% auto;background:#fff;border-radius:16px;padding:32px 28px;text-align:center;box-shadow:0 8px 40px rgba(0,0,0,0.3);">
+    <h2 style="font-size:22px;margin-bottom:6px;">🤖 thor12news</h2>
+    <p style="color:#888;font-size:13px;margin-bottom:16px;">AI-genererade nyheter — läs med omdöme</p>
+    <div style="text-align:left;font-size:14px;line-height:1.6;color:#444;margin-bottom:20px;">
+      <p><strong>Viktigt att veta:</strong></p>
+      <ul style="padding-left:18px;margin-top:6px;">
+        <li>Allt innehåll är skapat av en AI (artificiell intelligens).</li>
+        <li>Artiklarna baseras på riktiga nyhetshändelser men är helt AI-genererade.</li>
+        <li>Felaktigheter kan förekomma — kontrollera alltid med andra källor.</li>
+        <li>Detta är inte professionell journalistik.</li>
+        <li>Sidan har ingen ansvarig utgivare.</li>
+      </ul>
+    </div>
+    <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
+      <button onclick="localStorage.setItem('thor12news-ok','1');document.getElementById('disclaimer-overlay').style.display='none';document.body.style.overflow='';" style="background:#1a6bff;color:#fff;border:none;padding:12px 24px;border-radius:10px;font-size:15px;font-weight:600;cursor:pointer;">Jag har förstått</button>
+      <button onclick="window.location.href='about:blank'" style="background:#eee;color:#666;border:none;padding:12px 24px;border-radius:10px;font-size:15px;cursor:pointer;">Lämna sidan</button>
+    </div>
+  </div>
+</div>
+
 <script>
+  // Disclaimer — visa om inte redan godkänd
+  if (!localStorage.getItem('thor12news-ok')) {
+    document.getElementById('disclaimer-overlay').style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  }
   // Hide download buttons in-app or on desktop
   var db = document.getElementById('download-buttons');
   if (db) {
