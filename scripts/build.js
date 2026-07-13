@@ -354,7 +354,7 @@ function genArticles() {
 </header>
 <div class="article-page">
   <a href="/" class="back-link">← Tillbaka</a>
-  <img class="hero" src="${a.img}" alt="${a.title}">
+  <a href="${a.img}" target="_blank"><img class="hero" src="${a.img}" alt="${a.title}"></a>
   <span class="${tagClass(a.tag)}" ${tagStyle(a.tag)}>${a.tagLabel}</span>
   <h1>${a.title}</h1>
   <div class="meta">📅 Måndag 13 juli 2026</div>
