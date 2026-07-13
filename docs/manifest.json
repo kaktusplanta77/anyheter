@@ -1,0 +1,16 @@
+{
+  "name": "thor12news",
+  "short_name": "thor12news",
+  "description": "12 nyheter varje dag",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1a6bff",
+  "icons": [
+    {
+      "src": "/images/thor-icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
