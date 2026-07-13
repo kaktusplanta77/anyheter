@@ -164,13 +164,19 @@ footer a { color: #666; text-decoration: none; }
   </div>
 </a>
 </div>
-<footer>
+<footer id="main-footer">
   <p>thor12news — 12 nyheter varje dag · 13 juli 2026</p>
-  <div style="margin-top:14px;display:flex;justify-content:center;gap:10px;flex-wrap:wrap;">
+  <div id="download-buttons" style="margin-top:14px;display:flex;justify-content:center;gap:10px;flex-wrap:wrap;">
     <a href="/thor12news/thor12news.apk" style="display:inline-block;background:#1a6bff;color:#fff;padding:8px 18px;border-radius:10px;text-decoration:none;font-size:13px;font-weight:600;">📱 Ladda ner för Android</a>
     <a href="#" onclick="alert('Öppna thor12news i Safari, tryck på Dela-knappen (📤) och välj 'Lägg till på hemskärmen' — då funkar det som en app!')" style="display:inline-block;background:#333;color:#fff;padding:8px 18px;border-radius:10px;text-decoration:none;font-size:13px;font-weight:600;">🍏 Ladda ner för iOS</a>
   </div>
   <p style="margin-top:10px;font-size:11px;">Sammanställd av abot 🤖</p>
 </footer>
+<script>
+  // Hide download buttons when inside the thor12news Android app
+  if (navigator.userAgent.indexOf('thor12news-app') > -1) {
+    document.getElementById('download-buttons').style.display = 'none';
+  }
+</script>
 </body>
 </html>
