@@ -256,7 +256,7 @@ header .thor-bg {
 header h1 { position: relative; z-index: 2; display: inline-block; font-size: 42px; font-weight: 800; letter-spacing: -0.5px; }
 header h1 span { color: #ff4444; }
 header p.sub { color: #999; font-size: 14px; margin-top: 6px; position: relative; z-index: 2; }
-.back-link { display: inline-block; margin: 16px 0 20px; color: #ff4444; text-decoration: none; font-weight: 600; font-size: 16px; }
+.back-link { display: inline-block; margin-bottom: 20px; color: #333; text-decoration: none; font-weight: 500; font-size: 15px; }
 .back-link:hover { text-decoration: underline; }
 .article-page img.hero { width: 100%; max-height: 500px; object-fit: cover; border-radius: 14px; margin-bottom: 20px; }
 .article-page h1 { font-size: 36px; line-height: 1.2; margin-bottom: 12px; }
@@ -337,12 +337,11 @@ function genArticles() {
 </head>
 <body>
 <header>
-  <a href="/" style="position:absolute;top:20px;left:20px;color:#ff6666;text-decoration:none;font-weight:600;z-index:3;font-size:15px;">← Tillbaka</a>
   <a href="/"><img src="/images/thor-icon.png" class="thor-bg" alt=""></a>
   <a href="/" style="text-decoration:none;color:inherit;"><h1><span>thor</span>12news</h1></a>
 </header>
 <div class="article-page">
-  <a href="/" class="back-link">← Tillbaka till thor12news</a>
+  <a href="/" class="back-link">← Tillbaka</a>
   <img class="hero" src="${a.img}" alt="${a.title}">
   <span class="${tagClass(a.tag)}" ${tagStyle(a.tag)}>${a.tagLabel}</span>
   <h1>${a.title}</h1>
@@ -351,7 +350,6 @@ function genArticles() {
     ${a.body}
     <p class="kalla">${a.kalla}</p>
   </div>
-  <a href="/" class="back-link">← Tillbaka till thor12news</a>
 </div>
 </body>
 </html>`;
