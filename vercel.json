@@ -2,5 +2,8 @@
   "buildCommand": null,
   "outputDirectory": "docs",
   "installCommand": null,
-  "framework": null
+  "framework": null,
+  "rewrites": [
+    { "source": "/artikel/:slug", "destination": "/artikel/:slug.html" }
+  ]
 }
