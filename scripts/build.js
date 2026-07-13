@@ -308,7 +308,7 @@ function genIndex() {
 <body>
 <header>
   <img src="/images/thor-icon.png" class="thor-bg" alt="">
-  <h1><span>thor</span>12news</h1>
+  <h1>thor<span>12</span>news</h1>
   <p class="sub">12 nyheter varje dag — måndag 13 juli 2026</p>
 </header>
 <div class="container">
@@ -340,7 +340,7 @@ function genArticles() {
 <body>
 <header>
   <a href="/"><img src="/images/thor-icon.png" class="thor-bg" alt=""></a>
-  <a href="/" style="text-decoration:none;color:inherit;"><h1><span>thor</span>12news</h1></a>
+  <a href="/" style="text-decoration:none;color:inherit;"><h1>thor<span>12</span>news</h1></a>
 </header>
 <div class="article-page">
   <a href="/" class="back-link">← Tillbaka</a>
