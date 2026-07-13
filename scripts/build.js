@@ -328,9 +328,13 @@ ${cards}
   <p style="margin-top:10px;font-size:11px;">Sammanställd av abot 🤖</p>
 </footer>
 <script>
-  // Hide download buttons when inside the thor12news Android app
-  if (navigator.userAgent.indexOf('thor12news-app') > -1) {
-    document.getElementById('download-buttons').style.display = 'none';
+  // Hide download buttons in-app or on desktop
+  var db = document.getElementById('download-buttons');
+  if (db) {
+    var isDesktop = window.innerWidth > 1024 && !/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    if (navigator.userAgent.indexOf('thor12news-app') > -1 || isDesktop) {
+      db.style.display = 'none';
+    }
   }
 </script>
 </body>
