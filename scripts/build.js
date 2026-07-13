@@ -361,18 +361,16 @@ ${cards}
       <p style="margin-top:8px;">Om du inte accepterar ovanst\u00e5ende villkor ska du inte anv\u00e4nda webbplatsen.</p>
     </div>
     <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;border-top:1px solid #eee;padding-top:14px;">
-      <button onclick="localStorage.setItem('thor12news-ok','1');document.getElementById('disclaimer-overlay').style.display='none';document.body.style.overflow='';" style="background:#1a6bff;color:#fff;border:none;padding:12px 28px;border-radius:10px;font-size:15px;font-weight:600;cursor:pointer;">Jag har l\u00e4st och f\u00f6rst\u00e5tt</button>
+      <button onclick="document.getElementById('disclaimer-overlay').style.display='none';document.body.style.overflow='';" style="background:#1a6bff;color:#fff;border:none;padding:12px 28px;border-radius:10px;font-size:15px;font-weight:600;cursor:pointer;">Jag har l\u00e4st och f\u00f6rst\u00e5tt</button>
       <button onclick="window.location.href='about:blank'" style="background:#eee;color:#666;border:none;padding:12px 28px;border-radius:10px;font-size:15px;cursor:pointer;">L\u00e4mna sidan</button>
     </div>
   </div>
 </div>
 
 <script>
-  // Disclaimer \u2014 visa om inte redan godk\u00e4nd
-  if (!localStorage.getItem('thor12news-ok')) {
-    document.getElementById('disclaimer-overlay').style.display = 'block';
-    document.body.style.overflow = 'hidden';
-  }
+  // Disclaimer \u2014 visas varje g\u00e5ng sidan laddas
+  document.getElementById('disclaimer-overlay').style.display = 'block';
+  document.body.style.overflow = 'hidden';
   // Hide download buttons in-app or on desktop
   var db = document.getElementById('download-buttons');
   if (db) {

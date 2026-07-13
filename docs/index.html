@@ -206,18 +206,16 @@ footer a { color: #666; text-decoration: none; }
       <p style="margin-top:8px;">Om du inte accepterar ovanstående villkor ska du inte använda webbplatsen.</p>
     </div>
     <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;border-top:1px solid #eee;padding-top:14px;">
-      <button onclick="localStorage.setItem('thor12news-ok','1');document.getElementById('disclaimer-overlay').style.display='none';document.body.style.overflow='';" style="background:#1a6bff;color:#fff;border:none;padding:12px 28px;border-radius:10px;font-size:15px;font-weight:600;cursor:pointer;">Jag har läst och förstått</button>
+      <button onclick="document.getElementById('disclaimer-overlay').style.display='none';document.body.style.overflow='';" style="background:#1a6bff;color:#fff;border:none;padding:12px 28px;border-radius:10px;font-size:15px;font-weight:600;cursor:pointer;">Jag har läst och förstått</button>
       <button onclick="window.location.href='about:blank'" style="background:#eee;color:#666;border:none;padding:12px 28px;border-radius:10px;font-size:15px;cursor:pointer;">Lämna sidan</button>
     </div>
   </div>
 </div>
 
 <script>
-  // Disclaimer — visa om inte redan godkänd
-  if (!localStorage.getItem('thor12news-ok')) {
-    document.getElementById('disclaimer-overlay').style.display = 'block';
-    document.body.style.overflow = 'hidden';
-  }
+  // Disclaimer — visas varje gång sidan laddas
+  document.getElementById('disclaimer-overlay').style.display = 'block';
+  document.body.style.overflow = 'hidden';
   // Hide download buttons in-app or on desktop
   var db = document.getElementById('download-buttons');
   if (db) {
