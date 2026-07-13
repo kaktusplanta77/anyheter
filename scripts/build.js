@@ -395,6 +395,13 @@ function genArticles() {
   <meta charset="UTF-8">
   <link rel="icon" href="/images/thor-icon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="${a.title}">
+  <meta property="og:description" content="${a.ingress}">
+  <meta property="og:image" content="https://thor12news.vercel.app${a.img}">
+  <meta property="og:url" content="https://thor12news.vercel.app/artikel/${a.slug}">
+  <meta property="og:type" content="article">
+  <link rel="canonical" href="https://thor12news.vercel.app/artikel/${a.slug}">
   <title>${a.title} — thor12news</title>
   <style>${articleCSS}</style>
 </head>
