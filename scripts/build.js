@@ -270,7 +270,11 @@ header p.sub { color: #999; font-size: 14px; margin-top: 6px; position: relative
 @media (max-width: 600px) {
   .article-page h1 { font-size: 26px; } .article-page .content { font-size: 16px; }
   .article-page { padding: 12px; }
-}`;
+}
+.lightbox { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.92); z-index:9999; cursor:zoom-out; overflow:auto; }
+.lightbox img { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); max-width:95%; max-height:95%; object-fit:contain; border-radius:4px; }
+.lightbox .close-lb { position:fixed; top:16px; right:20px; color:#fff; font-size:36px; cursor:pointer; z-index:10000; line-height:1; opacity:0.8; }
+.lightbox .close-lb:hover { opacity:1; }`;
 
 function tagStyle(tag) {
   const c = tagColors[tag] || { bg: '#e0e0e0', fg: '#666' };
@@ -354,7 +358,11 @@ function genArticles() {
 </header>
 <div class="article-page">
   <a href="/" class="back-link">← Tillbaka</a>
-  <a href="${a.img}" target="_blank"><img class="hero" src="${a.img}" alt="${a.title}"></a>
+  <img class="hero" src="${a.img}" alt="${a.title}" onclick="openLightbox('${a.img}')">
+  <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+    <span class="close-lb" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" src="" alt="">
+  </div>
   <span class="${tagClass(a.tag)}" ${tagStyle(a.tag)}>${a.tagLabel}</span>
   <h1>${a.title}</h1>
   <div class="meta">📅 Måndag 13 juli 2026</div>
@@ -363,6 +371,11 @@ function genArticles() {
     <p class="kalla">${a.kalla}</p>
   </div>
 </div>
+<script>
+function openLightbox(s){document.getElementById('lightbox-img').src=s;document.getElementById('lightbox').style.display='block';document.body.style.overflow='hidden';}
+function closeLightbox(e){if(!e||e.target==e.currentTarget||e.target.classList.contains('close-lb')){document.getElementById('lightbox').style.display='none';document.getElementById('lightbox-img').src='';document.body.style.overflow='';}}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLightbox();});
+</script>
 </body>
 </html>`;
     fs.writeFileSync(`docs/artikel/${a.slug}.html`, html);
