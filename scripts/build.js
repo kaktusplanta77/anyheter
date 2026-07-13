@@ -361,7 +361,7 @@ function genArticles() {
   <a href="/" style="text-decoration:none;color:inherit;"><h1><span>thor</span>12news</h1></a>
 </header>
 <div class="article-page">
-  <a href="/" class="back-link">← Tillbaka</a>
+  <a href="#" class="back-link" onclick="history.back();return false">← Tillbaka</a>
   <img class="hero" src="${a.img}" alt="${a.title}" onclick="openLightbox('${a.img}')">
   <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
     <span class="close-lb" onclick="closeLightbox()">&times;</span>
