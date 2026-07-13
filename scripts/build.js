@@ -201,9 +201,10 @@ const sharedCSS = `
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f5; color: #222; }
 header {
-  background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%);
-  color: #fff; padding: 40px 0; text-align: center;
+  background: #fff;
+  color: #222; padding: 40px 0; text-align: center;
   position: relative; overflow: hidden;
+  border-bottom: 3px solid #1a6bff;
 }
 header .thor-bg {
   position: absolute; top: 50%; left: 50%;
@@ -212,8 +213,8 @@ header .thor-bg {
   pointer-events: none; z-index: 1;
 }
 header h1 { position: relative; z-index: 2; display: inline-block; font-size: 42px; font-weight: 800; letter-spacing: -0.5px; }
-header h1 span { color: #ff4444; }
-header p.sub { color: #999; font-size: 14px; margin-top: 6px; position: relative; z-index: 2; }
+header h1 span { color: #1a6bff; }
+header p.sub { color: #888; font-size: 14px; margin-top: 6px; position: relative; z-index: 2; }
 .container { max-width: 760px; margin: 0 auto; padding: 20px 16px; }
 .date-badge { text-align: center; margin-bottom: 24px; }
 .date-badge span { background: #eee; padding: 6px 16px; border-radius: 20px; font-size: 14px; color: #666; }
@@ -243,9 +244,10 @@ const articleCSS = `
 body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f5; color: #222; }
 .article-page { max-width: 900px; margin: 0 auto; padding: 20px 24px; }
 header {
-  background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%);
-  color: #fff; padding: 40px 0; text-align: center;
+  background: #fff;
+  color: #222; padding: 40px 0; text-align: center;
   position: relative; overflow: hidden;
+  border-bottom: 3px solid #1a6bff;
 }
 header .thor-bg {
   position: absolute; top: 50%; left: 50%;
@@ -254,7 +256,7 @@ header .thor-bg {
   pointer-events: none; z-index: 1;
 }
 header h1 { position: relative; z-index: 2; display: inline-block; font-size: 42px; font-weight: 800; letter-spacing: -0.5px; }
-header h1 span { color: #ff4444; }
+header h1 span { color: #1a6bff; }
 header p.sub { color: #999; font-size: 14px; margin-top: 6px; position: relative; z-index: 2; }
 .back-link { display: inline-block; margin-bottom: 20px; color: #333; text-decoration: none; font-weight: 500; font-size: 15px; }
 .back-link:hover { text-decoration: underline; }
