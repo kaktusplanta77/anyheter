@@ -330,22 +330,39 @@ ${cards}
 
 <!-- Disclaimer overlay -->
 <div id="disclaimer-overlay" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);z-index:99999;overflow:auto;">
-  <div style="max-width:520px;margin:10% auto;background:#fff;border-radius:16px;padding:32px 28px;text-align:center;box-shadow:0 8px 40px rgba(0,0,0,0.3);">
-    <h2 style="font-size:22px;margin-bottom:6px;">\ud83e\udd16 thor12news</h2>
-    <p style="color:#888;font-size:13px;margin-bottom:16px;">AI-genererade nyheter \u2014 l\u00e4s med omd\u00f6me</p>
-    <div style="text-align:left;font-size:14px;line-height:1.6;color:#444;margin-bottom:20px;">
-      <p><strong>Viktigt att veta:</strong></p>
-      <ul style="padding-left:18px;margin-top:6px;">
-        <li>Allt inneh\u00e5ll \u00e4r skapat av en AI (artificiell intelligens).</li>
-        <li>Artiklarna baseras p\u00e5 riktiga nyhetsh\u00e4ndelser men \u00e4r helt AI-genererade.</li>
-        <li>Felaktigheter kan f\u00f6rekomma \u2014 kontrollera alltid med andra k\u00e4llor.</li>
-        <li>Detta \u00e4r inte professionell journalistik.</li>
-        <li>Sidan har ingen ansvarig utgivare.</li>
+  <div style="max-width:580px;margin:5% auto;background:#fff;border-radius:16px;padding:28px 32px;box-shadow:0 8px 40px rgba(0,0,0,0.3);">
+    <h2 style="font-size:20px;margin-bottom:4px;">Viktig information innan du forts\u00e4tter</h2>
+    <p style="color:#888;font-size:13px;margin-bottom:16px;">V\u00e4lkommen till Thor12 News.</p>
+    <div style="text-align:left;font-size:13.5px;line-height:1.6;color:#444;margin-bottom:14px;max-height:55vh;overflow-y:auto;">
+      <p>Innan du anv\u00e4nder denna webbplats ber vi dig l\u00e4sa f\u00f6ljande information noggrant. Genom att klicka p\u00e5 <strong>"Jag har l\u00e4st och f\u00f6rst\u00e5tt"</strong> bekr\u00e4ftar du att du har tagit del av och accepterar dessa villkor.</p>
+
+      <h3 style="font-size:15px;margin:16px 0 4px;">AI-genererat inneh\u00e5ll</h3>
+      <p>Artiklar och annat inneh\u00e5ll p\u00e5 Thor12 News skapas helt eller delvis med hj\u00e4lp av artificiell intelligens (AI). \u00c4ven om vi str\u00e4var efter att publicera korrekt och aktuell information kan inneh\u00e5llet inneh\u00e5lla felaktigheter, ofullst\u00e4ndigheter eller uppgifter som senare visar sig vara fel.</p>
+      <p>Inneh\u00e5llet ska d\u00e4rf\u00f6r inte betraktas som juridisk, medicinsk, finansiell eller annan professionell r\u00e5dgivning.</p>
+
+      <h3 style="font-size:15px;margin:16px 0 4px;">Ingen garanti</h3>
+      <p>Thor12 News l\u00e4mnar inga garantier f\u00f6r att informationen \u00e4r fullst\u00e4ndig, korrekt eller aktuell. Bes\u00f6kare ansvarar sj\u00e4lva f\u00f6r att kontrollera viktiga uppgifter mot officiella eller andra tillf\u00f6rlitliga k\u00e4llor innan beslut fattas.</p>
+
+      <h3 style="font-size:15px;margin:16px 0 4px;">Rapportering av fel</h3>
+      <p>Om du uppt\u00e4cker felaktiga uppgifter, inneh\u00e5ll som kan vara missvisande eller material som kan kr\u00e4nka en persons r\u00e4ttigheter ber vi dig kontakta oss omg\u00e5ende. Vi granskar alla rapporter skyndsamt och r\u00e4ttar eller tar bort inneh\u00e5ll n\u00e4r det \u00e4r motiverat.</p>
+
+      <h3 style="font-size:15px;margin:16px 0 4px;">Ansvarsbegr\u00e4nsning</h3>
+      <p>I den utstr\u00e4ckning som svensk lag medger ansvarar Thor12 News inte f\u00f6r skador eller f\u00f6rluster som uppkommer till f\u00f6ljd av anv\u00e4ndning av webbplatsens inneh\u00e5ll eller tillit till publicerad information.</p>
+      <p>Denna ansvarsbegr\u00e4nsning g\u00e4ller dock inte i de fall d\u00e4r ansvar f\u00f6ljer av tvingande lagstiftning. Ingenting i dessa villkor ska tolkas som att Thor12 News eller dess \u00e4gare avs\u00e4ger sig ansvar som enligt lag inte kan avtalas bort.</p>
+
+      <h3 style="font-size:15px;margin:16px 0 4px;">Anv\u00e4ndarens bekr\u00e4ftelse</h3>
+      <p>Genom att forts\u00e4tta till webbplatsen bekr\u00e4ftar du att:</p>
+      <ul style="padding-left:18px;margin:4px 0;">
+        <li>du f\u00f6rst\u00e5r att inneh\u00e5llet \u00e4r helt eller delvis AI-genererat,</li>
+        <li>du \u00e4r medveten om att felaktigheter kan f\u00f6rekomma,</li>
+        <li>du sj\u00e4lv ansvarar f\u00f6r att verifiera viktig information,</li>
+        <li>du accepterar dessa anv\u00e4ndarvillkor.</li>
       </ul>
+      <p style="margin-top:8px;">Om du inte accepterar ovanst\u00e5ende villkor ska du inte anv\u00e4nda webbplatsen.</p>
     </div>
-    <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
-      <button onclick="localStorage.setItem('thor12news-ok','1');document.getElementById('disclaimer-overlay').style.display='none';document.body.style.overflow='';" style="background:#1a6bff;color:#fff;border:none;padding:12px 24px;border-radius:10px;font-size:15px;font-weight:600;cursor:pointer;">Jag har f\u00f6rst\u00e5tt</button>
-      <button onclick="window.location.href='about:blank'" style="background:#eee;color:#666;border:none;padding:12px 24px;border-radius:10px;font-size:15px;cursor:pointer;">L\u00e4mna sidan</button>
+    <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;border-top:1px solid #eee;padding-top:14px;">
+      <button onclick="localStorage.setItem('thor12news-ok','1');document.getElementById('disclaimer-overlay').style.display='none';document.body.style.overflow='';" style="background:#1a6bff;color:#fff;border:none;padding:12px 28px;border-radius:10px;font-size:15px;font-weight:600;cursor:pointer;">Jag har l\u00e4st och f\u00f6rst\u00e5tt</button>
+      <button onclick="window.location.href='about:blank'" style="background:#eee;color:#666;border:none;padding:12px 28px;border-radius:10px;font-size:15px;cursor:pointer;">L\u00e4mna sidan</button>
     </div>
   </div>
 </div>
