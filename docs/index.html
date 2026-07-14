@@ -167,15 +167,18 @@
       <p style="margin-top:8px;">Om du inte accepterar ovanstående villkor ska du inte använda webbplatsen.</p>
     </div>
     <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;border-top:1px solid #eee;padding-top:14px;">
-      <button onclick="document.getElementById('disclaimer-overlay').style.display='none';document.body.style.overflow='';" style="background:#1a6bff;color:#fff;border:none;padding:12px 28px;border-radius:10px;font-size:15px;font-weight:600;cursor:pointer;">Jag har läst och förstått</button>
+      <button onclick="sessionStorage.setItem('thor12news-ok','1');document.getElementById('disclaimer-overlay').style.display='none';document.body.style.overflow='';" style="background:#1a6bff;color:#fff;border:none;padding:12px 28px;border-radius:10px;font-size:15px;font-weight:600;cursor:pointer;">Jag har läst och förstått</button>
       <button onclick="window.location.href='about:blank'" style="background:#eee;color:#666;border:none;padding:12px 28px;border-radius:10px;font-size:15px;cursor:pointer;">Lämna sidan</button>
     </div>
   </div>
 </div>
 <script>
-  // Disclaimer visas varje gång sidan laddas (inget localStorage)
-  document.getElementById('disclaimer-overlay').style.display = 'block';
-  document.body.style.overflow = 'hidden';
+  // Disclaimer visas en gång per session (första besöket, försvinner vid navigering)
+  if (!sessionStorage.getItem('thor12news-ok')) {
+    document.getElementById('disclaimer-overlay').style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  }
+  // Spara att användaren sett den — klickknappen stänger bara
 </script>
 
 </body>
