@@ -4,16 +4,16 @@
   <meta charset="UTF-8">
   <link rel="icon" href="/images/thor-icon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>thor12news — Dina dagliga nyheter</title>
+  <title>thor12news — dagliga nyheter</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f5; color: #222; }
-    .container { max-width: 780px; margin: 0 auto; padding: 0 16px 40px; }
     header {
       background: #fff; color: #222; padding: 40px 0; text-align: center;
       position: relative; overflow: hidden;
       border-bottom: 3px solid #1a6bff;
     }
+    header h1 span { color: #1a6bff; }
     header .thor-bg {
       position: absolute; top: 50%; left: 50%;
       transform: translate(-50%, -50%);
@@ -21,144 +21,161 @@
       pointer-events: none; z-index: 1;
     }
     header h1 { position: relative; z-index: 2; display: inline-block; font-size: 42px; font-weight: 800; letter-spacing: -0.5px; }
-    header h1 span { color: #1a6bff; }
-    .date-badge { text-align: center; color: #888; font-size: 14px; padding: 14px 0 8px; }
+    .container { max-width: 780px; margin: 0 auto; padding: 20px 16px; }
+    .date-badge { text-align: center; color: #888; font-size: 14px; margin-bottom: 20px; }
     .article-card { display: block; text-decoration: none; color: inherit; background: #fff; border-radius: 14px; margin-bottom: 20px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); overflow: hidden; transition: box-shadow 0.2s; }
     .article-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
     .article-card img.thumb { width: 100%; height: 220px; object-fit: cover; display: block; background: #e0e0e0; }
     .article-card .preview { padding: 18px 22px; }
     .article-card .preview h2 { font-size: 21px; font-weight: 700; margin-bottom: 4px; line-height: 1.3; }
     .article-card .preview p.ingress { color: #555; font-size: 14.5px; line-height: 1.5; margin-top: 8px; }
-    .meta { font-size: 12px; color: #999; display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; }
+    .meta-tag { font-size: 13px; color: #888; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
     .tag { padding: 2px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; display: inline-block; }
-    .tag.varlden { background: #e8f5e9; color: #2e7d32; }
-    .tag.sverige { background: #e3f2fd; color: #1565c0; }
-    .tag.ekonomi { background: #fff3e0; color: #e65100; }
-    .tag.sport { background: #fce4ec; color: #c62828; }
-    .tag.kultur { background: #f3e5f5; color: #7b1fa2; }
+    .tag-varlden { background:#e8f5e9; color:#2e7d32; }
+    .tag-sverige { background:#e3f2fd; color:#1565c0; }
+    .tag-ekonomi { background:#fff3e0; color:#e65100; }
+    .tag-sport { background:#fce4ec; color:#c62828; }
+    footer { text-align: center; padding: 30px 0; color: #aaa; font-size: 13px; }
     @media (max-width: 600px) {
-      header h1 { font-size: 30px; }
+      header h1 { font-size: 32px; }
       .article-card img.thumb { height: 180px; }
       .article-card .preview h2 { font-size: 18px; }
     }
   </style>
 </head>
 <body>
+
 <header>
   <img src="/images/thor-icon.png" class="thor-bg" alt="">
   <h1><span>thor</span>12news</h1>
 </header>
+
 <div class="container">
-  <div class="date-badge">📅 Torsdag 16 juli 2026</div>
+  <div class="date-badge">Fredag 17 juli 2026</div>
 
+  <!-- 1. US-Iran -->
   <a href="/artikel/us-iran-strikes" class="article-card">
-    <img class="thumb" src="/images/us-iran-strikes.jpg" alt="USA attackerar Iran" loading="lazy">
+    <img class="thumb" src="/images/us-iran-strikes.jpg" alt="Rök efter USA:s flygattack mot Iran" loading="lazy">
     <div class="preview">
-      <div class="meta"><span class="tag varlden">Världen</span><span>3 tim sedan</span></div>
-      <h2>USA attackerar Iran femte dagen i rad — Hormuzsundet i centrum för eskaleringen</h2>
-      <p class="ingress">För femte dagen i rad genomför USA militära attacker mot Iran. Minst 30 civila har dödats och oljepriset skjuter i höjden när Hormuzsundet blockeras. Trump: "Vi får se om vi vill förhandla eller avsluta jobbet."</p>
+      <div class="meta-tag"><span class="tag tag-varlden">Världen</span><span>4 tim sedan</span></div>
+      <h2>USA attackerar Iran för sjätte natten — strid om Hormuzsundet eskalerar</h2>
+      <p class="ingress">Centcom bekräftar nya flygattacker mot iranska militära mål samtidigt som oljetankers bordas i blockaden. Iran svarar med attack mot USA-bas i Syrien. Hormuzsundet fortsatt stängt.</p>
     </div>
   </a>
 
-  <a href="/artikel/china-popularity" class="article-card">
-    <img class="thumb" src="/images/china-popularity.jpg" alt="Kina populärare än USA" loading="lazy">
+  <!-- 2. Japan -->
+  <a href="/artikel/japan-royal" class="article-card">
+    <img class="thumb" src="/images/japan-royal.jpg" alt="Japans kejserliga familj" loading="lazy">
     <div class="preview">
-      <div class="meta"><span class="tag varlden">Världen</span><span>5 tim sedan</span></div>
-      <h2>Kina nu populärare än USA globalt enligt Pew-studie — första gången i mätningens historia</h2>
-      <p class="ingress">I 25 av 36 länder har Kina högre favörsbetyg än USA enligt ny Pew-studie. Samtidigt har förtroendet för Trump sjunkit kraftigt medan Xi Jinping klättrar.</p>
+      <div class="meta-tag"><span class="tag tag-varlden">Världen</span><span>3 tim sedan</span></div>
+      <h2>Japan liberaliserar tronföljdsregler — men kvinnor fortfarande uteslutna från kejsartronen</h2>
+      <p class="ingress">Parlamentet godkänner historisk lagändring som tillåter adoption av manliga avlägsna släktingar, men över 70% av befolkningen vill ha kvinnlig kejsare — utan framgång.</p>
     </div>
   </a>
 
-  <a href="/artikel/bangkok-brand" class="article-card">
-    <img class="thumb" src="/images/bangkok-brand.jpg" alt="Bangkok-brand" loading="lazy">
+  <!-- 3. British Steel -->
+  <a href="/artikel/british-steel" class="article-card">
+    <img class="thumb" src="/images/british-steel.jpg" alt="British Steel stålverk i Scunthorpe" loading="lazy">
     <div class="preview">
-      <div class="meta"><span class="tag varlden">Världen</span><span>8 tim sedan</span></div>
-      <h2>32 döda i Bangkok-brand — experter varnar för upprepat mönster av säkerhetsbrister</h2>
-      <p class="ingress">Tredje stora nattklubbsbranden i Thailand på 17 år. Samma säkerhetsbrister som tidigare — och experter frågar sig: kommer något någonsin att förändras?</p>
+      <div class="meta-tag"><span class="tag tag-varlden">Världen</span><span>2 tim sedan</span></div>
+      <h2>Kina rasar mot Storbritanniens nationalisering av British Steel</h2>
+      <p class="ingress">Peking hotar med åtgärder efter att London tar över kinesiskägda British Steel — samtidigt som Andy Burnham förbereder sig för att bli premiärminister.</p>
     </div>
   </a>
 
-  <a href="/artikel/moderaterna-opinion" class="article-card">
-    <img class="thumb" src="/images/moderaterna-opinion.jpg" alt="Moderaterna" loading="lazy">
+  <!-- 4. Strypvåld -->
+  <a href="/artikel/strypvald-valdtakt" class="article-card">
+    <img class="thumb" src="/images/polis-strypning.jpg" alt="Polis vid brottsplats" loading="lazy">
     <div class="preview">
-      <div class="meta"><span class="tag sverige">Sverige</span><span>6 tim sedan</span></div>
-      <h2>M-toppen Christian Sonesson sågar ledningen: "De famlar — varför får vi inte cred?"</h2>
-      <p class="ingress">I en intervju med DN går den profilerade M-politikern till hård attack mot partiledningen och efterlyser en strategi för att vända de svaga opinionssiffrorna.</p>
+      <div class="meta-tag"><span class="tag tag-sverige">Sverige</span><span>5 tim sedan</span></div>
+      <h2>DN:s kartläggning: Strypvåld i var tredje våldtäktsfall — överläkare varnar</h2>
+      <p class="ingress">Omfattande granskning av tusentals domar visar att strypvåld ökat markant. Experter varnar för bestående skador. Polisen ser över sina rutiner.</p>
     </div>
   </a>
 
-  <a href="/artikel/gruvjobb-unga" class="article-card">
-    <img class="thumb" src="/images/gruvjobb-unga.jpg" alt="Gruvjobb" loading="lazy">
+  <!-- 5. SMHI -->
+  <a href="/artikel/smhi-skyfall" class="article-card">
+    <img class="thumb" src="/images/smhi-skyfall.jpg" alt="Åskmoln över svensk stad" loading="lazy">
     <div class="preview">
-      <div class="meta"><span class="tag sverige">Sverige</span><span>7 tim sedan</span></div>
-      <h2>Gruvjobben lockar unga med hög lön — "väldigt attraktivt" för nästa generation</h2>
-      <p class="ingress">Allt fler unga söker sig till gruvnäringen i norra Sverige. Hög lön utan krav på eftergymnasial utbildning lockar — men vägen från gruva till universitet kan vara krokig.</p>
+      <div class="meta-tag"><span class="tag tag-sverige">Sverige</span><span>6 tim sedan</span></div>
+      <h2>SMHI varnar för skyfall i helgen — efter värmeböljan kommer ovädret</h2>
+      <p class="ingress">Gul varning för kraftiga regn i södra och mellersta Sverige under helgen. Uppemot 60 mm väntas falla på kort tid — risk för översvämningar.</p>
     </div>
   </a>
 
-  <a href="/artikel/fastingar-sverige" class="article-card">
-    <img class="thumb" src="/images/fastingar-sverige.jpg" alt="Fästingar" loading="lazy">
+  <!-- 6. Säkerhetsrådgivaren -->
+  <a href="/artikel/sakerhetsradgivaren-anteckningar" class="article-card">
+    <img class="thumb" src="/images/riksdag-kammare.jpg" alt="Riksdagens kammare" loading="lazy">
     <div class="preview">
-      <div class="meta"><span class="tag sverige">Sverige</span><span>10 tim sedan</span></div>
-      <h2>Fästingarna blir allt fler i Sverige — expert: "Så skyddar du dig bäst"</h2>
-      <p class="ingress">Sommaren är högsäsong för fästingar och med ett varmare klimat sprider sig arterna norrut. Här är experternas bästa råd för att undvika borrelia och TBE.</p>
+      <div class="meta-tag"><span class="tag tag-sverige">Sverige</span><span>7 tim sedan</span></div>
+      <h2>Nationella säkerhetsrådgivaren glömde anteckningsbok — Kristersson KU-anmäls</h2>
+      <p class="ingress">Vänsterpartiet KU-anmäler statsministern efter incidenten där säkerhetskänslig information lämnades kvar på Nato-möte. Anteckningsboken fortfarande försvunnen.</p>
     </div>
   </a>
 
-  <a href="/artikel/oljepris-hormuz" class="article-card">
-    <img class="thumb" src="/images/oljepris-hormuz.jpg" alt="Oljepris" loading="lazy">
+  <!-- 7. OnePlus -->
+  <a href="/artikel/oneplus-lamnar-europa" class="article-card">
+    <img class="thumb" src="/images/oneplus-phone.jpg" alt="OnePlus-smartphone" loading="lazy">
     <div class="preview">
-      <div class="meta"><span class="tag ekonomi">Ekonomi</span><span>2 tim sedan</span></div>
-      <h2>Oljepriset skjuter i höjden — Hormuz-konflikten hotar global ekonomi</h2>
-      <p class="ingress">Brentoljan passerade 145 dollar per fat när USA:s blockad av iranska hamnar stoppat tankertrafiken genom ett av världens viktigaste farleder.</p>
+      <div class="meta-tag"><span class="tag tag-ekonomi">Ekonomi</span><span>3 tim sedan</span></div>
+      <h2>Svenskgrundade OnePlus lämnar Europa — hård konkurrens och regeltryck bakom beslutet</h2>
+      <p class="ingress">Den populära mobiltillverkaren drar sig ur Europa efter fallande försäljning och ökad konkurrens. Svenska användare mister garantiservice och framtida uppdateringar.</p>
     </div>
   </a>
 
-  <a href="/artikel/usa-tullar-brasilien" class="article-card">
-    <img class="thumb" src="/images/usa-tullar-brasilien.jpg" alt="USA-Brasilien tullar" loading="lazy">
+  <!-- 8. Börsrapport -->
+  <a href="/artikel/borsrapport-starka-rapporter" class="article-card">
+    <img class="thumb" src="/images/bors-avslutning.jpg" alt="Börshandlare" loading="lazy">
     <div class="preview">
-      <div class="meta"><span class="tag ekonomi">Ekonomi</span><span>4 tim sedan</span></div>
-      <h2>USA inför 25-procentiga tullar mot Brasilien — handelskriget trappas upp</h2>
-      <p class="ingress">Trump-administrationen inför tullar på brasilianskt stål, aluminium och jordbruksprodukter. Brasilien lovar motåtgärder — handelsexperter varnar för globala konsekvenser.</p>
+      <div class="meta-tag"><span class="tag tag-ekonomi">Ekonomi</span><span>2 tim sedan</span></div>
+      <h2>Starka kvartalsrapporter dämpar börsoro — SBAB-chefen varnar för ekonomisk osäkerhet</h2>
+      <p class="ingress">Stockholmsbörsen återhämtar sig något efter positiva rapporter, men oljepriset stiger till följd av Iran-konflikten. Kronan fortsatt svag mot dollar och euro.</p>
     </div>
   </a>
 
-  <a href="/artikel/argentina-vm-final" class="article-card">
-    <img class="thumb" src="/images/argentina-vm-final.jpg" alt="Argentina VM-final" loading="lazy">
+  <!-- 9. VM-final -->
+  <a href="/artikel/vm-final-2026-new-york" class="article-card">
+    <img class="thumb" src="/images/vm-final-metlife.jpg" alt="MetLife Stadium" loading="lazy">
     <div class="preview">
-      <div class="meta"><span class="tag sport">Sport</span><span>12 tim sedan</span></div>
-      <h2>Argentina till VM-final efter drömvändning — Messi visade vägen i slutminuterna</h2>
-      <p class="ingress">England var minuter från final — men Lionel Messi orkestrerade en fullständig vändning. Nu väntar Spanien i söndagens final. "Vi är unika", säger förbundskapten Scaloni.</p>
+      <div class="meta-tag"><span class="tag tag-sport">Sport</span><span>5 tim sedan</span></div>
+      <h2>VM-final 2026 hotas av brandrök — New York utlyser luftkvalitetslarm</h2>
+      <p class="ingress">Argentina mot Brasilien på MetLife Stadium kan påverkas av röken från kanadensiska skogsbränder. Guvernören kallar situationen allvarlig. FIFA har beredskapsplaner.</p>
     </div>
   </a>
 
-  <a href="/artikel/hegseth-testosteron" class="article-card">
-    <img class="thumb" src="/images/hegseth-testosteron.jpg" alt="Hegseth testosteron" loading="lazy">
+  <!-- 10. Canada wildfires -->
+  <a href="/artikel/canada-wildfires" class="article-card">
+    <img class="thumb" src="/images/canada-wildfire-smoke.jpg" alt="Rök från skogsbränder" loading="lazy">
     <div class="preview">
-      <div class="meta"><span class="tag varlden">Världen</span><span>4 tim sedan</span></div>
-      <h2>Hegseth inför obligatorisk testosterontestning — "High-T Department" för USA:s soldater</h2>
-      <p class="ingress">Pentagon inför testosteronscreening för all militär personal över 30. "Kulturstridsfixering" säger kritiker medan experter varnar för biverkningar som infertilitet.</p>
+      <div class="meta-tag"><span class="tag tag-varlden">Världen</span><span>6 tim sedan</span></div>
+      <h2>Kanadensiska skogsbränder kväver USA — över 800 bränder brinner</h2>
+      <p class="ingress">Röken från bränderna i Kanada har nått New York, Chicago och Detroit. Förstört samhälle i norra Ontario. Luftkvaliteten i Detroit värst i världen.</p>
     </div>
   </a>
 
-  <a href="/artikel/frankrike-dodshjalp" class="article-card">
-    <img class="thumb" src="/images/frankrike-dodshjalp.jpg" alt="Frankrike dödshjälp" loading="lazy">
+  <!-- 11. Taco Bell -->
+  <a href="/artikel/taco-bell-lettuce" class="article-card">
+    <img class="thumb" src="/images/taco-bell-lettuce.jpg" alt="Taco Bell" loading="lazy">
     <div class="preview">
-      <div class="meta"><span class="tag kultur">Samhälle</span><span>6 tim sedan</span></div>
-      <h2>Frankrike godkänner lag om assisterat döende — efter årtionden av debatt</h2>
-      <p class="ingress">Det franska parlamentet har antagit en av Europas mest strikta lagar om assisterat döende. Katolska kyrkan beklagar beslutet medan opinionsmätningar visar brett stöd.</p>
+      <div class="meta-tag"><span class="tag tag-ekonomi">Ekonomi</span><span>5 tim sedan</span></div>
+      <h2>Taco Bell tar bort sallad från menyn — kopplas till parasitutbrott</h2>
+      <p class="ingress">Över 1 600 personer smittade av cyklosporiasis efter att ha ätit på Taco Bell i fem delstater. 94 personer sjukhusvårdade. Salladen tas bort "i överflöd av försiktighet".</p>
     </div>
   </a>
 
-  <a href="/artikel/brittiskt-stal" class="article-card">
-    <img class="thumb" src="/images/brittiskt-stal.jpg" alt="Brittiskt stål" loading="lazy">
+  <!-- 12. Andy Burnham -->
+  <a href="/artikel/andy-burnham-pm" class="article-card">
+    <img class="thumb" src="/images/andy-burnham.jpg" alt="Andy Burnham" loading="lazy">
     <div class="preview">
-      <div class="meta"><span class="tag ekonomi">Ekonomi</span><span>5 tim sedan</span></div>
-      <h2>Brittiska regeringen förstatligar British Steel — räddar tusentals jobb</h2>
-      <p class="ingress">Keir Starmers regering tar över stålkoncernen i en omfattande räddningsaktion som säkrar 4 000 arbetstillfällen. Konservativa kritiserar förstatligandet.</p>
+      <div class="meta-tag"><span class="tag tag-varlden">Världen</span><span>2 tim sedan</span></div>
+      <h2>Andy Burnham blir Storbritanniens nästa premiärminister — "Manchesterismen" går till No 10</h2>
+      <p class="ingress">F.d. borgmästaren i Greater Manchester blir Labourledare efter Starmer och tar över som premiärminister på måndag. Planerar att decentralisera makt till regionerna.</p>
     </div>
   </a>
+
 </div>
+
+<footer>thor12news ⚡ AI-genererade nyheter</footer>
 
 <div id="disclaimer-overlay" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);z-index:99999;overflow:auto;">
   <div style="max-width:580px;margin:5% auto;background:#fff;border-radius:16px;padding:28px 32px;box-shadow:0 8px 40px rgba(0,0,0,0.3);">
@@ -193,11 +210,11 @@
   </div>
 </div>
 <script>
-  // Disclaimer visas en gång per session (första besöket, inte vid tillbakavigering från artikel)
   if (!sessionStorage.getItem('thor12news-ok')) {
     document.getElementById('disclaimer-overlay').style.display = 'block';
     document.body.style.overflow = 'hidden';
   }
 </script>
+
 </body>
 </html>
